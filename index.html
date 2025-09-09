@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Pooch — coming soon</title>
+  <meta name="description" content="My Pooch — beautiful, practical things for you and your dog. Join the list to be first to know." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="My Pooch — coming soon" />
+  <meta property="og:description" content="Join the waitlist to be first to know." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mypooch.ie" />
+  <meta property="og:image" content="./og-image.png" />
+
+  <link rel="icon" href="./favicon.ico" />
+
+  <!-- Baloo 2 font for heading -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #121212;
+      --muted: #6b7280;
+      --accent-dark: #51717e; /* zielonoszary */
+      --accent-light: #97d1a9; /* jasnozielony */
+      --ring: rgba(151,209,169,0.25);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--fg);
+      display: grid; place-items: center;
+    }
+
+    .container {
+      width: min(640px, 92vw);
+      text-align: center;
+      padding: 6rem 1.25rem 4rem;
+    }
+
+    /* Logo card */
+    .logo {
+      width: 160px; height: 160px;
+      margin: 0 auto 1.25rem;
+      display: grid; place-items: center;
+      border-radius: 32px; background: #fff;
+      box-shadow: 0 6px 24px rgba(0,0,0,.06);
+    }
+    .logo img { width: 110px; height: 110px; display: block; }
+
+    /* Heading */
+    h1 {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: clamp(32px, 4vw, 48px); /* większy */
+      line-height: 1.1;
+      margin: 0 0 .25rem;
+      letter-spacing: -0.01em;
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    .sub { color: var(--muted); margin: 0 0 2.25rem; font-size: 1rem; }
+
+    form { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; }
+    .field { position: relative; flex: 1 1 320px; max-width: 420px; }
+    input[type=email] {
+      width: 100%; padding: .9rem 1rem;
+      border-radius: 12px; border: 1px solid #d1d5db;
+      background: #fff; color: var(--fg);
+      outline: none; font-size: 1rem;
+      transition: box-shadow .15s ease, border-color .15s ease;
+    }
+    input[type=email]:focus { border-color: var(--accent-light); box-shadow: 0 0 0 6px var(--ring); }
+
+    /* Button */
+    button {
+      padding: .95rem 1.25rem;
+      border-radius: 12px; border: none;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      font-weight: 600;
+      cursor: pointer; font-size: 1rem;
+      transition: transform .04s ease, filter .15s ease;
+    }
+    button:hover { filter: brightness(1.05); }
+    button:active { transform: translateY(1px); }
+
+    .legal { margin-top: 1rem; font-size: .9rem; color: var(--muted); }
+    .legal a { color: var(--accent-dark); text-decoration: none; }
+    .legal a:hover { text-decoration: underline; }
+    .footer { margin-top: 3rem; font-size: .85rem; color: var(--muted); }
+
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+    /* simple success message state (hash-based) */
+    #success { display: none; margin-top: 1.5rem; color: var(--accent-dark); font-weight: 600; }
+    :target#success { display:block; }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <!-- Final logo -->
+    <div class="logo" aria-hidden="true">
+      <img src="./mypooch_logo.svg" alt="My Pooch logo">
+    </div>
+
+    <h1>mypooch.ie</h1>
+    <p class="sub">Coming soon — join the list to be first to know.</p>
+
+    <!-- FORM -->
+    <form action="https://formspree.io/f/FORM_ID" method="POST" aria-label="Join the waitlist">
+      <div class="field">
+        <label for="email" class="sr-only">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+      </div>
+      <button type="submit">Notify me</button>
+      <input type="hidden" name="subject" value="My Pooch — new waitlist signup" />
+      <input type="hidden" name="_next" value="https://liquidhoney.github.io/mypooch/#success" />
+    </form>
+
+    <p id="success">Thanks! You’re on the list.</p>
+
+    <p class="legal">By subscribing you agree to receive emails from My Pooch. <br />You can unsubscribe anytime. <a href="#">Privacy</a></p>
+
+    <p class="footer">© <span id="year"></span> My Pooch. All rights reserved.</p>
+  </main>
+
+  <noscript><div style="text-align:center;color:#6b7280">JavaScript is disabled — the page works, but some enhancements may be limited.</div></noscript>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
