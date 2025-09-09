@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Pooch — coming soon</title>
+  <meta name="description" content="My Pooch — beautiful, practical things for you and your dog. Join the list to be first to know." />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Open Graph (optional) -->
+  <meta property="og:title" content="My Pooch — coming soon" />
+  <meta property="og:description" content="Join the waitlist to be first to know." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mypooch.ie" />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #121212;
+      --muted: #6b7280;
+      --accent: #1b7e46; /* subtle Irish green */
+      --ring: rgba(27,126,70,0.25);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--fg);
+      display: grid; place-items: center;
+    }
+    .container {
+      width: min(640px, 92vw);
+      text-align: center;
+      padding: 6rem 1.25rem 4rem;
+    }
+    .logo {
+      width: 128px; height: 128px; margin: 0 auto 1.25rem; display: grid; place-items: center;
+      border-radius: 32px; background: #fff; box-shadow: 0 6px 24px rgba(0,0,0,.06);
+    }
+    .logo svg { width: 72px; height: 72px; }
+    h1 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.1; margin: 0 0 .25rem; letter-spacing: -0.01em; }
+    .sub { color: var(--muted); margin: 0 0 2.25rem; font-size: 1rem; }
+
+    form { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; }
+    .field { position: relative; flex: 1 1 320px; max-width: 420px; }
+    input[type=email] {
+      width: 100%; padding: .9rem 1rem; border-radius: 12px; border: 1px solid #d1d5db; background: #fff; color: var(--fg);
+      outline: none; font-size: 1rem; transition: box-shadow .15s ease, border-color .15s ease;
+    }
+    input[type=email]:focus { border-color: var(--accent); box-shadow: 0 0 0 6px var(--ring); }
+    button {
+      padding: .95rem 1.25rem; border-radius: 12px; border: none; background: var(--accent); color: #fff; font-weight: 600;
+      cursor: pointer; font-size: 1rem; transition: transform .04s ease, filter .15s ease;
+    }
+    button:hover { filter: brightness(1.05); }
+    button:active { transform: translateY(1px); }
+
+    .legal { margin-top: 1rem; font-size: .9rem; color: var(--muted); }
+    .legal a { color: var(--accent); text-decoration: none; }
+    .legal a:hover { text-decoration: underline; }
+
+    .footer { margin-top: 3rem; font-size: .85rem; color: var(--muted); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+    /* simple success message state (hash-based) */
+    #success { display: none; margin-top: 1.5rem; color: var(--accent); font-weight: 600; }
+    :target#success { display:block; }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <!-- Replace the inline SVG with your final logo when ready -->
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#F4F6F5"/>
+        <path d="M42 38c-2 3-6 5-10 5s-8-2-10-5c-1-1 0-3 1-3h4c3 0 5-2 6-4 1-2 3-4 6-4h3c2 0 3 2 3 3 0 5-1 6-3 8Z" fill="#111"/>
+        <circle cx="40" cy="28" r="2" fill="#111"/>
+      </svg>
+    </div>
+
+    <h1>mypooch.ie</h1>
+    <p class="sub">Coming soon — join the list to be first to know.</p>
+
+    <!-- FORM: replace action with your provider endpoint (Formspree/Mailchimp embedded post URL).  -->
+    <form action="https://formspree.io/f/FORM_ID" method="POST" aria-label="Join the waitlist">
+      <div class="field">
+        <label for="email" class="sr-only">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+      </div>
+      <button type="submit">Notify me</button>
+      <!-- Optional hidden fields -->
+      <input type="hidden" name="subject" value="My Pooch — new waitlist signup" />
+      <!-- redirect back with #success so we can show a message without JS -->
+      <input type="hidden" name="_next" value="https://mypooch.ie/#success" />
+    </form>
+
+    <p id="success">Thanks! You’re on the list.</p>
+
+    <p class="legal">By subscribing you agree to receive emails from My Pooch. <br />You can unsubscribe anytime. <a href="#">Privacy</a></p>
+
+    <p class="footer">© <span id="year"></span> My Pooch. All rights reserved.</p>
+  </main>
+  <noscript><div style="text-align:center;color:#6b7280">JavaScript is disabled — the page works, but some enhancements may be limited.</div></noscript>
+  <script>
+    // set current year for footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
