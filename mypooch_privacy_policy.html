@@ -5,44 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — My Pooch</title>
   <meta name="description" content="Privacy Policy for My Pooch (mypooch.ie). GDPR-compliant notice about the data we collect, why, and your rights." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Open Graph (optional) -->
+  <meta property="og:title" content="Privacy Policy — My Pooch" />
+  <meta property="og:description" content="How My Pooch handles your data in line with GDPR." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mypooch.ie/privacy.html" />
+  <meta property="og:image" content="./og-image.png" />
+
+  <!-- Favicon + fonts to match the landing -->
+  <link rel="icon" type="image/svg+xml" href="mypooch_logo.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+
   <style>
-    :root { --bg:#fafafa; --fg:#111; --muted:#6b7280; --accent:#1b7e46; }
+    :root{
+      --bg:#fafafa;
+      --fg:#121212;
+      --muted:#6b7280;
+      --accent-dark:#51717e;   /* zielonoszary */
+      --accent-light:#97d1a9;  /* jasnozielony */
+      --ring:rgba(151,209,169,0.25);
+      --card:#ffffff;
+      --border:#e5e7eb;
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;line-height:1.6;background:var(--bg);color:var(--fg)}
-    .wrap{max-width:880px;margin:auto;padding:3rem 1.25rem}
-    h1{letter-spacing:-.01em;line-height:1.2;margin:.25rem 0 1rem}
-    h2{margin:2rem 0 .5rem}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      color:var(--fg); background:var(--bg);
+      display:block;
+    }
+    .wrap{max-width:880px;margin:0 auto;padding:4rem 1.25rem}
+    .back{color:var(--muted);text-decoration:none}
+    .back:hover{text-decoration:underline}
+    .head{
+      display:flex; align-items:center; gap:1rem; margin:0 0 .5rem;
+    }
+    .logo-card{
+      width:72px;height:72px; border-radius:20px; background:#fff; display:grid; place-items:center;
+      box-shadow:0 6px 24px rgba(0,0,0,.06); border:1px solid var(--border);
+    }
+    .logo-card img{width:56px;height:56px; display:block}
+    h1{
+      font-family:'Baloo 2',sans-serif;
+      font-size:clamp(28px,3.6vw,40px);
+      line-height:1.1; letter-spacing:-.01em; margin:.1rem 0 0; color:var(--accent-dark);
+    }
+    .muted{color:var(--muted); margin:.25rem 0 0}
+    nav{margin:1.25rem 0 2rem; display:flex; flex-wrap:wrap; gap:.75rem}
+    nav a{color:var(--accent-dark); text-decoration:none; font-size:.95rem}
+    nav a:hover{text-decoration:underline}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:16px;
+      padding:1.1rem 1.25rem; margin:1rem 0;
+    }
+    h2{margin:0 0 .5rem; font-size:1.15rem}
     p,li{color:#222}
-    .muted{color:var(--muted)}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:1.1rem 1.25rem}
-    nav{margin:1rem 0 2rem;display:flex;flex-wrap:wrap;gap:.75rem}
-    code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:.1rem .35rem}
-    footer{margin-top:3rem;color:var(--muted);font-size:.9rem}
-    .toplink{margin-bottom:.5rem}
-    .logo{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:14px;background:#fff;border:1px solid #e5e7eb;margin-right:.5rem;vertical-align:middle}
-    .headerline{display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem}
+    code{background:#f1f5f9; border:1px solid #e2e8f0; border-radius:6px; padding:.1rem .35rem}
+    footer{margin-top:2.5rem; color:var(--muted); font-size:.9rem}
   </style>
 </head>
 <body>
   <main class="wrap" role="main">
-    <p class="toplink muted"><a href="/">← Back to mypooch.ie</a></p>
+    <p><a class="back" href="/">← Back to mypooch.ie</a></p>
 
-    <div class="headerline">
-      <!-- optional: swap SVG for your image if you prefer -->
-      <div class="logo" aria-hidden="true">
-        <svg viewBox="0 0 64 64" width="36" height="36" xmlns="http://www.w3.org/2000/svg" fill="none">
-          <circle cx="32" cy="32" r="30" fill="#F4F6F5"/>
-          <path d="M42 38c-2 3-6 5-10 5s-8-2-10-5c-1-1 0-3 1-3h4c3 0 5-2 6-4 1-2 3-4 6-4h3c2 0 3 2 3 3 0 5-1 6-3 8Z" fill="#111"/>
-          <circle cx="40" cy="28" r="2" fill="#111"/>
-        </svg>
+    <header class="head">
+      <div class="logo-card" aria-hidden="true">
+        <img src="mypooch_logo.svg" alt="" />
       </div>
       <div>
         <h1>Privacy Policy</h1>
         <p class="muted">Last updated: 14 September 2025</p>
       </div>
-    </div>
+    </header>
 
     <p>We respect your privacy. This page explains what personal data we collect on <strong>mypooch.ie</strong>, why we collect it, how we handle it, and the rights you have under the GDPR.</p>
 
@@ -65,15 +102,15 @@
     <section id="who" class="card">
       <h2>1) Who we are</h2>
       <p><strong>My Pooch</strong> (“we”, “us”) operates the website <strong>mypooch.ie</strong>. We are based in Dublin, Ireland and act as the <em>data controller</em> for the processing described here.</p>
-      <p>Contact email: <a href="mailto:info@mypooch.ie">info@mypooch.ie</a></p>
+      <p>Contact: <a href="mailto:info@mypooch.ie">info@mypooch.ie</a></p>
     </section>
 
     <section id="data" class="card">
       <h2>2) Data we collect</h2>
       <ul>
         <li><strong>Contact data</strong> — your email address when you join our waitlist or contact us.</li>
-        <li><strong>Message content</strong> — any information you include in free-text fields.</li>
-        <li><strong>Technical/operational data</strong> — minimal request logs from our hosting (e.g., IP address, user agent, page and timestamp) for security and reliability.</li>
+        <li><strong>Message content</strong> — information you include in free-text fields.</li>
+        <li><strong>Technical/operational data</strong> — minimal request logs from our hosting (e.g., IP, user agent, page and timestamp) to keep the site reliable and secure.</li>
       </ul>
       <p>Please avoid sharing sensitive (special-category) data. We do not intentionally collect it.</p>
     </section>
@@ -83,7 +120,7 @@
       <ul>
         <li>To run our waitlist and send you updates about our launch and products (only if you opt in).</li>
         <li>To respond to enquiries and provide customer support.</li>
-        <li>To operate, secure and improve the Site (e.g., troubleshooting, abuse prevention, service analytics based on aggregated logs).</li>
+        <li>To operate, secure and improve the Site (e.g., troubleshooting, abuse prevention, high-level usage insights).</li>
         <li>To comply with legal obligations (e.g., record-keeping).</li>
       </ul>
     </section>
@@ -103,7 +140,7 @@
       <h2>5) Sharing & processors</h2>
       <p>We do not sell your personal data. We use trusted service providers (“processors”) who process data on our behalf under contracts and appropriate safeguards:</p>
       <ul>
-        <li><strong>Form handling</strong>: Formspree — receives form submissions (waitlist/contact).</li>
+        <li><strong>Form handling</strong>: Formspree — receives form submissions (waitlist/contact). Endpoint will be listed in our forms’ code.</li>
         <li><strong>Email hosting</strong>: Titan Mail — sends/receives <code>@mypooch.ie</code> email.</li>
         <li><strong>Website hosting</strong>: GitHub Pages — serves our static site.</li>
       </ul>
@@ -111,21 +148,21 @@
 
     <section id="transfers" class="card">
       <h2>6) International transfers</h2>
-      <p>Some providers may process data outside the EEA. Where this occurs, we rely on safeguards such as the European Commission’s Standard Contractual Clauses (SCCs) or adequacy decisions as provided by our processors.</p>
+      <p>Some providers may process data outside the EEA. Where this occurs, we rely on safeguards such as the European Commission’s Standard Contractual Clauses (SCCs) or adequacy decisions, as provided by our processors.</p>
     </section>
 
     <section id="retention" class="card">
       <h2>7) How long we keep data</h2>
       <ul>
         <li>Waitlist/marketing: until you unsubscribe or we retire the list.</li>
-        <li>Enquiries: typically up to 12 months after the last interaction, unless needed longer to resolve an issue.</li>
+        <li>Enquiries: typically up to 12 months after the last interaction unless needed longer to resolve an issue.</li>
         <li>Operational logs: short, rolling periods unless required to investigate incidents.</li>
       </ul>
     </section>
 
     <section id="rights" class="card">
       <h2>8) Your rights</h2>
-      <p>Under GDPR you may have the rights to access, rectify, erase, restrict or object to processing, and to data portability. You can also withdraw consent at any time. You may lodge a complaint with a supervisory authority. In Ireland this is the <a href="https://www.dataprotection.ie/" target="_blank" rel="noopener">Data Protection Commission</a>.</p>
+      <p>Under GDPR you may have rights to access, rectify, erase, restrict or object to processing, and to data portability. You can also withdraw consent at any time. You may lodge a complaint with a supervisory authority. In Ireland this is the <a href="https://www.dataprotection.ie/" target="_blank" rel="noopener">Data Protection Commission</a>.</p>
       <p>To exercise your rights, contact <a href="mailto:info@mypooch.ie">info@mypooch.ie</a>. We may need to verify your identity before acting on a request.</p>
     </section>
 
@@ -158,6 +195,7 @@
       <p>© <span id="year"></span> My Pooch. All rights reserved.</p>
     </footer>
   </main>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
