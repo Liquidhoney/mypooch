@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you — My Pooch</title>
+  <meta name="description" content="Thank you for joining the My Pooch waitlist. Here's what happens next." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thank you — My Pooch" />
+  <meta property="og:description" content="You're on the My Pooch waitlist. We'll be in touch with updates soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mypooch.ie/thank-you.html" />
+  <meta property="og:image" content="./og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="mypooch_fav.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #121212;
+      --muted: #6b7280;
+      --accent-dark: #51717e;
+      --accent-light: #97d1a9;
+      --ring: rgba(151, 209, 169, 0.25);
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--fg);
+      display: grid;
+      place-items: center;
+    }
+
+    main {
+      width: min(680px, 92vw);
+      padding: 5.5rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    .badge {
+      width: 136px;
+      height: 136px;
+      margin: 0 auto 1.5rem;
+      border-radius: 32px;
+      background: var(--card);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 24px rgba(0,0,0,.06);
+      border: 1px solid var(--border);
+    }
+
+    .badge svg {
+      width: 84px;
+      height: 84px;
+      stroke: var(--accent-dark);
+    }
+
+    h1 {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.08;
+      margin: 0 0 .75rem;
+      letter-spacing: -0.01em;
+      color: var(--accent-dark);
+    }
+
+    .lede {
+      font-size: 1.05rem;
+      margin: 0 0 2.5rem;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin: 0 auto 2rem;
+      text-align: left;
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      color: var(--accent-dark);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--fg);
+      line-height: 1.55;
+    }
+
+    .card ul {
+      margin: 0;
+      padding: 0 0 0 1.2rem;
+      display: grid;
+      gap: .65rem;
+      color: var(--fg);
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .9rem 1.4rem;
+      border-radius: 14px;
+      background: var(--accent-dark);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .04s ease, filter .15s ease;
+    }
+
+    a.button:hover { filter: brightness(1.05); }
+    a.button:active { transform: translateY(1px); }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    .footer a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 520px) {
+      main { padding-top: 4.5rem; }
+      .card { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <main role="main">
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" fill="rgba(151,209,169,0.18)" />
+        <path d="m9.2 12.5 2 2.1 4-4.3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+
+    <h1>Thank you for joining the pack!</h1>
+    <p class="lede">You're officially on the My Pooch waitlist. We can't wait to share launch news, product drops, and tips for life with your best friend.</p>
+
+    <section class="card" aria-labelledby="next-steps">
+      <h2 id="next-steps">What happens next</h2>
+      <ul>
+        <li><strong>Check your inbox</strong> for a quick hello from us — add <a href="mailto:info@mypooch.ie">info@mypooch.ie</a> to your contacts so future updates stay front and centre.</li>
+        <li><strong>Stay tuned</strong> for sneak peeks, behind-the-scenes stories, and an invitation to our launch.</li>
+        <li><strong>Need anything?</strong> Just reply to our email or write to <a href="mailto:info@mypooch.ie">info@mypooch.ie</a>. We love hearing from fellow dog people.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="social">
+      <h2 id="social">Want more My Pooch energy?</h2>
+      <p>We’re brewing something special for you and your dog. Follow along for design sketches, favourite walks, and a first look at new gear.</p>
+    </section>
+
+    <a class="button" href="/">Back to homepage</a>
+
+    <p class="footer">Prefer not to hear from us? You can unsubscribe any time — each email includes a simple link.</p>
+  </main>
+</body>
+</html>
