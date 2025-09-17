@@ -20,10 +20,11 @@
   <style>
     :root {
       --bg: #fafafa;
-      --fg: #121212;
+      --fg: #333333;
       --muted: #6b7280;
       --accent-dark: #51717e;
       --accent-light: #97d1a9;
+      --link: #fab0a0;
       --ring: rgba(151, 209, 169, 0.25);
       --card: #ffffff;
       --border: #e5e7eb;
@@ -38,6 +39,14 @@
       color: var(--fg);
       display: grid;
       place-items: center;
+    }
+
+    a:not(.button) {
+      color: var(--link);
+    }
+
+    a:not(.button):hover {
+      text-decoration: underline;
     }
 
     main {
@@ -137,7 +146,7 @@
     }
 
     .footer a {
-      color: var(--accent-dark);
+      color: var(--link);
       text-decoration: none;
     }
 
