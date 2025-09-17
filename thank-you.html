@@ -14,16 +14,17 @@
   <meta property="og:url" content="https://mypooch.ie/thank-you.html" />
   <meta property="og:image" content="./og-image.png" />
 
-  <link rel="icon" type="image/svg+xml" href="mypooch_fav.svg" />
+  <link rel="icon" type="image/svg+xml" href="mypooch_logo.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #fafafa;
-      --fg: #121212;
+      --fg: #51717e; /* ciemnozielony z logo */
       --muted: #6b7280;
       --accent-dark: #51717e;
       --accent-light: #97d1a9;
+      --link: #97d1a9; /* jasnozielony z logo */
       --ring: rgba(151, 209, 169, 0.25);
       --card: #ffffff;
       --border: #e5e7eb;
@@ -38,6 +39,14 @@
       color: var(--fg);
       display: grid;
       place-items: center;
+    }
+
+    a:not(.button) {
+      color: var(--link);
+    }
+
+    a:not(.button):hover {
+      text-decoration: underline;
     }
 
     main {
@@ -58,10 +67,10 @@
       border: 1px solid var(--border);
     }
 
-    .badge svg {
-      width: 84px;
-      height: 84px;
-      stroke: var(--accent-dark);
+    .badge img {
+      width: 92px;
+      height: 92px;
+      display: block;
     }
 
     h1 {
@@ -110,6 +119,10 @@
       color: var(--fg);
     }
 
+    strong {
+      color: var(--accent-dark);
+    }
+
     a.button {
       display: inline-flex;
       align-items: center;
@@ -133,7 +146,7 @@
     }
 
     .footer a {
-      color: var(--accent-dark);
+      color: var(--link);
       text-decoration: none;
     }
 
@@ -148,10 +161,7 @@
 <body>
   <main role="main">
     <div class="badge" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="9" stroke="currentColor" fill="rgba(151,209,169,0.18)" />
-        <path d="m9.2 12.5 2 2.1 4-4.3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
+      <img src="./mypooch_logo.svg" alt="My Pooch logo" />
     </div>
 
     <h1>Thank you for joining the pack!</h1>
