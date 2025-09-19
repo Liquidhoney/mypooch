@@ -14,17 +14,38 @@
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Language" content="en" />
   <title>My Pooch — coming soon</title>
   <meta name="description" content="My Pooch — beautiful, practical things for you and your dog. Join the list to be first to know." />
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="dogs, cats, pet accessories, lifestyle, my pooch" />
+  <link rel="canonical" href="https://mypooch.ie/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="My Pooch — coming soon" />
   <meta property="og:description" content="Join the waitlist to be first to know." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mypooch.ie" />
-  <meta property="og:image" content="./og-image.png" />
+  <meta property="og:image" content="https://mypooch.ie/mypooch_97D1A9.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "My Pooch",
+    "url": "https://mypooch.ie/",
+    "logo": "https://mypooch.ie/mypooch_logo.svg",
+    "description": "My Pooch — beautiful, practical things for you and your dog.",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "info@mypooch.ie",
+        "areaServed": "IE"
+      }
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/svg+xml" href="mypooch_fav.svg" />
 
@@ -117,6 +138,7 @@ button:active {
     .footer { margin-top: 3rem; font-size: .85rem; color: var(--muted); }
 
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+    .hp-field { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
     /* simple success message state (hash-based) */
     #success { display: none; margin-top: 1.5rem; color: var(--accent-dark); font-weight: 600; }
@@ -139,9 +161,13 @@ button:active {
     <label for="email" class="sr-only">Email address</label>
     <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
   </div>
+  <div class="hp-field" aria-hidden="true">
+    <label for="company">Company</label>
+    <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+  </div>
   <button type="submit">Notify me</button>
   <input type="hidden" name="subject" value="My Pooch — new waitlist signup" />
-  <input type="hidden" name="_next" value="https://mypooch.ie/#success" />
+  <input type="hidden" name="_next" value="https://mypooch.ie/thank-you" />
 </form>
 
     <p id="success">Thanks! You’re on the list.</p>
@@ -157,7 +183,20 @@ button:active {
   <noscript><div style="text-align:center;color:#6b7280">JavaScript is disabled — the page works, but some enhancements may be limited.</div></noscript>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearTarget = document.getElementById('year');
+    if (yearTarget) {
+      yearTarget.textContent = new Date().getFullYear();
+    }
+
+    const waitlistForm = document.querySelector('form[aria-label="Join the waitlist"]');
+    if (waitlistForm) {
+      waitlistForm.addEventListener('submit', (event) => {
+        const honeypot = waitlistForm.querySelector('input[name="company"]');
+        if (honeypot && honeypot.value.trim() !== '') {
+          event.preventDefault();
+        }
+      });
+    }
   </script>
 </body>
 </html>
