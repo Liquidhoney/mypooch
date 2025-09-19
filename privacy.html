@@ -2,16 +2,6 @@
 <html lang="en">
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB67XV4TK2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BB67XV4TK2');
-</script>
-  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Language" content="en" />
@@ -83,8 +73,19 @@
       background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;
       padding:.1rem .35rem
     }
+    .cookie-manage{
+      background:none;
+      border:none;
+      padding:0;
+      font:inherit;
+      color:var(--link);
+      cursor:pointer;
+    }
+    .cookie-manage:hover,.cookie-manage:focus{text-decoration:underline}
+    .cookie-manage:focus-visible{outline:2px solid var(--accent-light);outline-offset:2px;border-radius:4px}
     footer{margin-top:2.5rem;color:var(--muted);font-size:.9rem}
   </style>
+  <script src="cookie-consent.js" defer></script>
 </head>
 <body>
   <main class="wrap" role="main">
@@ -95,7 +96,7 @@
   </a>
   <div>
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: 14 September 2025</p>
+    <p class="muted">Last updated: 18 September 2025</p>
   </div>
 </header>
     
@@ -103,9 +104,9 @@
     <section id="tldr" class="card">
       <h2>TL;DR — In short</h2>
       <ul>
-        <li>We only collect your <strong>email address</strong> when you join our waitlist or contact us.</li>
-        <li>We use it <strong>only to keep in touch</strong> about our launch and products — no spam.</li>
-        <li>Your data is stored securely with trusted providers (Formspree, Titan Mail, GitHub Pages).</li>
+        <li>We collect your <strong>email address and message</strong> when you join our waitlist or contact us.</li>
+        <li>We use optional <strong>Google Analytics 4</strong> to understand traffic trends — it runs only after you accept analytics cookies.</li>
+        <li>Your data is stored securely with trusted providers (Formspree, Titan Mail, GitHub Pages, Google Ireland Ltd. for analytics if enabled).</li>
         <li>You can <strong>unsubscribe anytime</strong> or ask us to delete your data via <a href="mailto:info@mypooch.ie">info@mypooch.ie</a>.</li>
       </ul>
     </section>
@@ -139,6 +140,7 @@
       <ul>
         <li><strong>Contact data</strong> — your email address when you join our waitlist or contact us.</li>
         <li><strong>Message content</strong> — information you include in free-text fields.</li>
+        <li><strong>Analytics data (optional)</strong> — aggregated usage insights such as pages viewed, approximate location (city/country), device type, and events (e.g., form submissions) collected via Google Analytics 4 only after you opt in to analytics cookies. IP addresses are anonymised.</li>
         <li><strong>Technical/operational data</strong> — minimal request logs (IP, user agent, timestamp) for security and reliability.</li>
       </ul>
       <p>Please avoid sharing sensitive (special-category) data. We do not intentionally collect it.</p>
@@ -150,6 +152,7 @@
         <li>To run our waitlist and send you updates (only if you opt in).</li>
         <li>To respond to enquiries and provide support.</li>
         <li>To operate, secure and improve the Site (e.g., troubleshooting, abuse prevention).</li>
+        <li>To understand how people use the Site (analytics) so we can improve content and experience — only after you consent to analytics cookies.</li>
         <li>To comply with legal obligations.</li>
       </ul>
     </section>
@@ -157,7 +160,7 @@
     <section id="legal" class="card">
       <h2>4) Legal bases (GDPR)</h2>
       <ul>
-        <li><strong>Consent</strong> — waitlist/marketing emails.</li>
+        <li><strong>Consent</strong> — waitlist/marketing emails and analytics cookies.</li>
         <li><strong>Legitimate interests</strong> — running a secure website.</li>
         <li><strong>Contract</strong> — responding to messages you send us.</li>
         <li><strong>Legal obligation</strong> — where applicable.</li>
@@ -172,12 +175,13 @@
         <li><strong>Form handling</strong>: Formspree — receives waitlist/contact submissions.</li>
         <li><strong>Email hosting</strong>: Titan Mail — handles <code>@mypooch.ie</code> email.</li>
         <li><strong>Website hosting</strong>: GitHub Pages — serves our static site.</li>
+        <li><strong>Analytics (optional)</strong>: Google Analytics 4 (Google Ireland Ltd.) — provides aggregated usage reports when you consent to analytics cookies.</li>
       </ul>
     </section>
 
     <section id="transfers" class="card">
       <h2>6) International transfers</h2>
-      <p>Some providers may process data outside the EEA. We rely on safeguards such as SCCs or adequacy decisions.</p>
+      <p>Some providers may process data outside the EEA. Formspree and Google Analytics 4 may store data in the United States or other regions. We rely on safeguards such as Standard Contractual Clauses, adequacy decisions, and Google’s EU data residency controls. Analytics data is pseudonymised and collected only when you give consent.</p>
     </section>
 
     <section id="retention" class="card">
@@ -186,6 +190,7 @@
         <li>Waitlist/marketing: until you unsubscribe or we retire the list.</li>
         <li>Enquiries: up to 12 months after last interaction unless needed longer.</li>
         <li>Logs: short, rolling periods unless needed for incidents.</li>
+        <li>Cookie consent choice: stored for up to 12 months (or until you update it) to remember your preferences.</li>
       </ul>
     </section>
 
@@ -195,8 +200,14 @@
     </section>
 
     <section id="cookies" class="card">
-      <h2>9) Cookies</h2>
-      <p>Our site is static. We don’t use tracking cookies. Only minimal local storage may be used (e.g., success message after a form).</p>
+      <h2>9) Cookies & consent</h2>
+      <p>We use a small amount of technology to keep the Site functional and to understand what resonates:</p>
+      <ul>
+        <li><strong>Essential storage</strong> — required to operate the Site, secure our forms, remember that you closed the cookie banner, and store your cookie preference. This uses first-party local storage or a lightweight cookie.</li>
+        <li><strong>Analytics cookies (optional)</strong> — Google Analytics 4 sets first-party cookies only after you consent. They measure visits, pages viewed, approximate location (city/country), device information, and events such as waitlist sign-ups. IP addresses are anonymised and advertising features are disabled.</li>
+      </ul>
+      <p>On your first visit we ask for consent through our banner. Analytics stays disabled until you click “Accept”. If you choose “Decline”, we respect that decision.</p>
+      <p>You can change your mind anytime via the <button type="button" class="cookie-manage" data-cookie-consent="manage">Cookie settings</button> link in the footer. When you withdraw consent we stop sending new analytics data and update Google Consent Mode to disable analytics storage.</p>
     </section>
 
     <section id="security" class="card">
@@ -220,7 +231,7 @@
     </section>
 
     <footer>
-      <p>© <span id="year"></span> My Pooch. All rights reserved.</p>
+      <p>© <span id="year"></span> My Pooch. All rights reserved. · <button type="button" class="cookie-manage" data-cookie-consent="manage">Cookie settings</button></p>
     </footer>
   </main>
 
