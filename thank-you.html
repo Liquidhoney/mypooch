@@ -154,11 +154,24 @@
 
     .footer a:hover { text-decoration: underline; }
 
+    .cookie-manage {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      color: var(--link);
+      cursor: pointer;
+    }
+
+    .cookie-manage:hover, .cookie-manage:focus { text-decoration: underline; }
+    .cookie-manage:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 2px; border-radius: 4px; }
+
     @media (max-width: 520px) {
       main { padding-top: 4.5rem; }
       .card { padding: 1.25rem; }
     }
   </style>
+  <script src="cookie-consent.js" defer></script>
 </head>
 <body>
   <main role="main">
@@ -185,7 +198,7 @@
 
     <a class="button" href="/">Back to homepage</a>
 
-    <p class="footer">Prefer not to hear from us? You can unsubscribe any time — each email includes a simple link.</p>
+    <p class="footer">Prefer not to hear from us? You can unsubscribe any time — each email includes a simple link. · <button type="button" class="cookie-manage" data-cookie-consent="manage">Cookie settings</button></p>
   </main>
 </body>
 </html>
